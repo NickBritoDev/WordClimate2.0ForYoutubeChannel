@@ -188,6 +188,7 @@ body {
   right: 15px;
   font-size: 45px;
   color: #fff;
+  cursor: pointer;
 }
 
 .toggleModeOn {
