@@ -36,6 +36,7 @@ async function apiRequestExecutor() {
 
     fetch(`${urlFetchApi}`).then(response => response.json()).then(json => {
         if (json.cod === '404') {
+            searchInput.value = ''
             container.style.height = '600px'
             weatherBox.style.display = 'none'
             weatherDetails.style.display = 'none'
