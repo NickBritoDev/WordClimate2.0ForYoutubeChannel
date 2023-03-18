@@ -1,0 +1,24 @@
+.dark .container {
+  background-color: #0000009a;
+}
+
+.dark .search-box input {
+  border: 3px solid #06283d;
+  background-color: rgb(235, 235, 235);
+}
+
+.dark .weather-details span {
+  color: #fff;
+}
+
+.dark .weather-details {
+  color: #fff;
+}
+
+.dark .toggleModeOn {
+  color: #000;
+}
+
+.dark .not-found {
+  color: #fff;
+}
