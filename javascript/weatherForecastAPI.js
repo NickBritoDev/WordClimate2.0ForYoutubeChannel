@@ -11,9 +11,17 @@ const description = document.querySelector('.weather-box .description')
 const humidity = document.querySelector('.weather-details .humidity span')
 const wind = document.querySelector('.weather-details .wind span')
 
-search.addEventListener('click', async () => { apiRequestExecutor() })
+search.addEventListener('click', async () => {
+    apiRequestExecutor()
+    searchInput.value = ''
+})
 
-searchInput.addEventListener('keyup', (e) => { if (e.code === 'Enter') { apiRequestExecutor() } })
+searchInput.addEventListener('keyup', (e) => {
+    if (e.code === 'Enter') {
+        apiRequestExecutor()
+        searchInput.value = ''
+    }
+})
 
 async function apiRequestExecutor() {
     const apiKey = '31c84243a77727cf5ea54e93b100b3fb'
@@ -49,7 +57,7 @@ async function apiRequestExecutor() {
         weatherDetails.classList.add('fade-in')
         image.setAttribute('src', `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`)
         container.style.height = '600px'
-        searchInput.value = ''
+
 
     })
 }
